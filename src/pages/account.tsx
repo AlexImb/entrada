@@ -52,13 +52,13 @@ export default function Account() {
         </div>
 
         <div>
-          <ButtonPrimary className="button block primary" type="submit" disabled={formLoading}>
+          <ButtonPrimary disabled={formLoading}>
             {formLoading ? 'Loading ...' : 'Update'}
           </ButtonPrimary>
         </div>
 
         <div>
-          <ButtonPrimary className="button block" type="button" onClick={() => logOut()}>
+          <ButtonPrimary onClick={() => logOut()}>
             Sign Out
           </ButtonPrimary>
         </div>
