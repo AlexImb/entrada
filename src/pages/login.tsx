@@ -10,8 +10,7 @@ export default function Login() {
 
   return (
     <div className="">
-        <button className="" type="button" onClick={() => signInWithAzure()}>LOGIN WITH AZURE</button>
-        <div>{isLoading}</div>
+        <button className="btn" type="button" onClick={() => signInWithAzure()}>LOGIN WITH AZURE</button>
     </div>
   )
 }
