@@ -1,5 +1,6 @@
 import { BaseKey, useGetIdentity, useLogout } from '@refinedev/core'
 import { useForm } from '@refinedev/react-hook-form'
+import { ButtonPrimary } from '../components/button'
 
 interface IUserIdentity {
   id?: BaseKey
@@ -51,15 +52,15 @@ export default function Account() {
         </div>
 
         <div>
-          <button className="button block primary" type="submit" disabled={formLoading}>
+          <ButtonPrimary className="button block primary" type="submit" disabled={formLoading}>
             {formLoading ? 'Loading ...' : 'Update'}
-          </button>
+          </ButtonPrimary>
         </div>
 
         <div>
-          <button className="button block" type="button" onClick={() => logOut()}>
+          <ButtonPrimary className="button block" type="button" onClick={() => logOut()}>
             Sign Out
-          </button>
+          </ButtonPrimary>
         </div>
       </form>
     </div>

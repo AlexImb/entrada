@@ -2,6 +2,7 @@ import React from "react";
 import { IResourceComponentsProps, useNavigation } from "@refinedev/core";
 import { useTable } from "@refinedev/react-table";
 import { ColumnDef, flexRender } from "@tanstack/react-table";
+import { ButtonPrimary } from "../../components/button";
 
 export const ProfileList: React.FC<IResourceComponentsProps> = () => {
     const columns = React.useMemo<ColumnDef<any>[]>(
@@ -38,13 +39,13 @@ export const ProfileList: React.FC<IResourceComponentsProps> = () => {
                                 gap: "4px",
                             }}
                         >
-                            <button
+                            <ButtonPrimary
                                 onClick={() => {
                                     show("profiles", getValue() as string);
                                 }}
                             >
                                 Show
-                            </button>
+                            </ButtonPrimary>
                         </div>
                     );
                 },
@@ -127,27 +128,27 @@ export const ProfileList: React.FC<IResourceComponentsProps> = () => {
                 </table>
             </div>
             <div style={{ marginTop: "12px" }}>
-                <button
+                <ButtonPrimary
                     onClick={() => setPageIndex(0)}
                     disabled={!getCanPreviousPage()}
                 >
                     {"<<"}
-                </button>
-                <button
+                </ButtonPrimary>
+                <ButtonPrimary
                     onClick={() => previousPage()}
                     disabled={!getCanPreviousPage()}
                 >
                     {"<"}
-                </button>
-                <button onClick={() => nextPage()} disabled={!getCanNextPage()}>
+                </ButtonPrimary>
+                <ButtonPrimary onClick={() => nextPage()} disabled={!getCanNextPage()}>
                     {">"}
-                </button>
-                <button
+                </ButtonPrimary>
+                <ButtonPrimary
                     onClick={() => setPageIndex(getPageCount() - 1)}
                     disabled={!getCanNextPage()}
                 >
                     {">>"}
-                </button>
+                </ButtonPrimary>
                 <span>
                     <strong>
                         {" "}

@@ -1,5 +1,6 @@
 import { useLogout, useMenu } from "@refinedev/core";
 import { NavLink } from "react-router-dom";
+import { ButtonPrimary } from "../button/button";
 
 export const Menu = () => {
   const { mutate: logout } = useLogout();
@@ -14,7 +15,7 @@ export const Menu = () => {
           </li>
         ))}
       </ul>
-      <button onClick={() => logout()}>Logout</button>
+      <ButtonPrimary onClick={() => logout()}>Logout</ButtonPrimary>
     </nav>
   );
 };
