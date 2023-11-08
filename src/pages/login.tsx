@@ -1,7 +1,7 @@
 import { useLogin } from '@refinedev/core'
 
 
-export default function Auth() {
+export default function Login() {
   const { isLoading, mutate: login } = useLogin()
 
   async function signInWithAzure() {
